@@ -46,7 +46,7 @@ public class UserAccountPage extends PageBase {
 	public void clickSignInButton() {
 		try {
 			waitForElementClickable(signInButton());
-			signInButton().click();
+			click(signInButton());
 		} catch (Exception e) {
 			System.out.println("Message is :" + e.getMessage());
 			e.printStackTrace();
@@ -59,8 +59,8 @@ public class UserAccountPage extends PageBase {
 		try {
 			String emailID = readExcel("MAX", "Login", "UserName");
 			waitForElementClickable(emailTextBox());
-			emailTextBox().click();
-			emailTextBox().sendKeys(emailID);
+			click(emailTextBox());
+			sendKeys(emailTextBox(), emailID);
 		} catch (Exception e) {
 			System.out.println("Message is :" + e.getMessage());
 			e.printStackTrace();
@@ -72,8 +72,8 @@ public class UserAccountPage extends PageBase {
 	public void enterPassword() {
 		try {
 			String password = readExcel("MAX", "Login", "Password");
-			passwordTextBox().click();
-			passwordTextBox().sendKeys(password);
+			click(passwordTextBox());
+			sendKeys(passwordTextBox(), password);
 		} catch (Exception e) {
 			System.out.println("Message is :" + e.getMessage());
 			e.printStackTrace();
@@ -84,7 +84,7 @@ public class UserAccountPage extends PageBase {
 
 	public void clickAccountSignInButton() {
 		try {
-			accountSignInButton().click();
+			click(accountSignInButton());
 			waitForElementVisible(accountHeader());
 		} catch (Exception e) {
 			System.out.println("Message is :" + e.getMessage());
@@ -107,7 +107,7 @@ public class UserAccountPage extends PageBase {
 			waitForElementVisible(accountContactUsButton());
 			verticalSwipeAction();
 			waitForElementClickable(accountSignOutButton());
-			accountSignOutButton().click();
+			click(accountSignOutButton());
 		} catch (Exception e) {
 			System.out.println("Message is :" + e.getMessage());
 			e.printStackTrace();

@@ -24,7 +24,7 @@ public class HomePage extends PageBase {
 	public void navigateToAccountSection() {
 		try {
 			waitForElementVisible(logo());
-			chooseAccountButton().click();
+			click(chooseAccountButton());
 		} catch (Exception e) {
 			System.out.println("Message is :" + e.getMessage());
 			e.printStackTrace();

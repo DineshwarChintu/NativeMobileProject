@@ -19,9 +19,11 @@ public class TestBaseClass {
 
 		try {
 			DesiredCapabilities dc = new DesiredCapabilities();
+			String currentDirectory = System.getProperty("user.dir");
+			String separator = System.getProperty("file.separator");
 			dc.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
-			dc.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.0");
-			dc.setCapability(MobileCapabilityType.APP, "E:\\workspace\\NativeAndroidProject\\Max_Fashion_base.apk");
+			dc.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.0");		
+			dc.setCapability(MobileCapabilityType.APP, currentDirectory+separator+"Max_Fashion_base.apk");
 			dc.setCapability(MobileCapabilityType.DEVICE_NAME, "ZY223K2PQV");
 			dc.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 			dc.setCapability("unicodeKeyboard", true);

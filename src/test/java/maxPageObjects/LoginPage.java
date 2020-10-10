@@ -24,7 +24,7 @@ public class LoginPage extends PageBase {
 	public void clickNavigationButton() {
 		try {
 			waitForElementVisible(navigationButton());
-			navigationButton().click();
+			click(navigationButton());
 		} catch (Exception e) {
 			System.out.println("Message is :" + e.getMessage());
 			e.printStackTrace();
@@ -35,7 +35,7 @@ public class LoginPage extends PageBase {
 
 	public void clickShopCategory() {
 		try {
-			shopBasedOnGenderButton().click();
+			click(shopBasedOnGenderButton());
 		} catch (Exception e) {
 			System.out.println("Message is :" + e.getMessage());
 			e.printStackTrace();

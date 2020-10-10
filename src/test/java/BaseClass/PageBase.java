@@ -73,4 +73,24 @@ public abstract class PageBase {
 		}
 		return data;
 	}
+	
+	public MobileElement click(MobileElement element) {
+		try {
+			element.click();
+		} catch (Exception e) {
+			System.out.println("Message is :" + e.getMessage());
+			e.printStackTrace();
+		}
+		return element;
+	}
+	
+	public MobileElement sendKeys(MobileElement element,String name) {
+		try {
+			element.sendKeys(name);
+		} catch (Exception e) {
+			System.out.println("Message is :" + e.getMessage());
+			e.printStackTrace();
+		}
+		return element;
+	}
 }
